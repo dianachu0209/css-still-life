@@ -22,47 +22,16 @@
   }
 
   .cup {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
+    width: 80px;
+    height: 80px;
+    border: 1px solid gray;
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 5%, rgba(11, 57, 138, 1) 5%, rgba(11, 57, 138, 1) 23%, rgba(255, 255, 255, 1) 23%, rgba(255, 255, 255, 1) 41%, rgba(11, 57, 138, 1) 41%, rgba(11, 57, 138, 1) 59%, rgba(255, 255, 255, 1) 59%, rgba(255, 255, 255, 1) 77%, rgba(11, 57, 138, 1) 77%, rgba(11, 57, 138, 1) 77%, rgba(11, 57, 138, 1) 95%, rgba(255, 255, 255, 1) 95%);
     /*can pass multiple gradients to create glare effect */
     background-size: 100%;
     /*would need another set of vals here */
     border-radius: 5%
   }
-
-  .top-cup {
-    position: absolute;
-    /* 
-    takes out of relative positioning
-    things will stay in the same place within
-    the frame and not be affected by other
-    elements
-    */
-    left: 50px;
-    bottom: 155px
-  }
-
-  .bottom-cup {
-    position: absolute;
-    left: 50px;
-    bottom: 55px
-  }
-
-  .side-cup {
-    position: absolute;
-    left: 250px;
-    top: 50px;
-  }
-
-  /*   .stripe {
-    width: 100%;
-    height: 15px;
-    margin-top: 10px;
-    background-color: blue
-  } */
-  .cup::before {
+    .cup::before {
     content: '';
     position: absolute;
     background-color: red;
@@ -78,14 +47,73 @@
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     width: 30%;
     height: 30%;
-    top: 30px;
+    top: 26px;
     left: 5px;
+  }
+
+  .top-cup {
+    position: absolute;
+    /* 
+    takes out of relative positioning
+    things will stay in the same place within
+    the frame and not be affected by other
+    elements
+    */
+    left: 50px;
+    bottom: 115px
+  }
+
+  .bottom-cup {
+    position: absolute;
+    left: 50px;
+    bottom: 35px
+  }
+
+  .side-cup {
+    position: absolute;
+    left: 230px;
+    bottom: 285px;
+  }
+  .coffee {
+    width: 170px;
+    height: 250px;
+    background: linear-gradient(0deg, rgba(255,68,68,1) 26%, rgba(255,252,40,1) 26%);
+    border: 1px solid gray;
+    border-radius: 2%;
+  }
+  .left-coffee{
+    position: absolute;
+    left: 15px;
+    bottom: 35px
+  }
+  .right-coffee{
+    position: absolute;
+    left: 185px;
+    bottom: 35px
+  }
+  .kettle{
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    width: 300px;
+    height: 325px;
+    background: linear-gradient(0deg, rgba(134,134,119,1) 33%, rgba(255,149,68,1) 33%);
+    clip-path: polygon(86% 26%, 71% 59%, 71% 67%, 79% 80%, 81% 100%, 30% 100%, 29% 16%, 58% 4%, 86% 12%);
   }
 </style>
 
 
 <div class="frame">
   <!-- ur HTML code goes here -->
+  <div class="kettle">
+    
+  </div>
+  <div class="coffee left-coffee">
+    
+  </div>
+  <div class="coffee right-coffee">
+    
+  </div>
   <div class="cup top-cup">
   </div>
 
