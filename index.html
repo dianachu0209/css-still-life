@@ -35,7 +35,7 @@
     .cup::before {
     content: '';
     position: absolute;
-    background-color: red;
+    background-color: #ce1e1e;
     width: 100%;
     height: 100%;
     clip-path: polygon(56% 50%, 0 0, 0 100%);
@@ -72,8 +72,42 @@
 
   .side-cup {
     position: absolute;
+      width: 80px;
+    height: 80px;
+    border: 1px solid gray;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 5%, rgba(11, 57, 138, 1) 5%, rgba(11, 57, 138, 1) 23%, rgba(255, 255, 255, 1) 23%, rgba(255, 255, 255, 1) 41%, rgba(11, 57, 138, 1) 41%, rgba(11, 57, 138, 1) 59%, rgba(255, 255, 255, 1) 59%, rgba(255, 255, 255, 1) 77%, rgba(11, 57, 138, 1) 77%, rgba(11, 57, 138, 1) 77%, rgba(11, 57, 138, 1) 95%, rgba(255, 255, 255, 1) 95%);
+    /*can pass multiple gradients to create glare effect */
+    background-size: 100%;
+    /*would need another set of vals here */
+    border-radius: 5%;
     left: 230px;
     bottom: 285px;
+  }
+  .side-cup::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 20%;
+    height: 100%;
+    left: 40px;
+  }
+  .side-cup::before{
+    content: '';
+    position: absolute;
+    background-color: #ce1e1e;
+    height: 100%;
+    width: 36%;
+    left: 50px;
+    clip-path: polygon(0 0, 100% 26%, 100% 74%, 0% 100%);
+  }
+  .star {
+    position: absolute;
+    background-color: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    width: 15px;
+    height: 15px;
+    bottom: 316px;
+    left: 293px;
   }
   .coffee {
     width: 170px;
@@ -81,6 +115,14 @@
     background: linear-gradient(0deg, rgba(255,68,68,1) 26%, rgba(255,252,40,1) 26%);
     border: 1px solid gray;
     border-radius: 2%;
+  }
+  .coffee::before {
+    content: '';
+    position: absolute;
+    background-color: #f5f11f;
+    height: 5%;
+    width: 100%;
+    border: 1px solid gray;
   }
   .left-coffee{
     position: absolute;
@@ -103,9 +145,9 @@
   }
   .kettle-base {
     position: absolute;
-    left: 230px;
+    left: 250px;
     bottom: 40px;
-    width: 250px;
+    width: 220px;
     height: 150px;
     background: linear-gradient(
       45deg,
@@ -132,7 +174,7 @@
   }
   .kettle-body {
     position: absolute;
-    bottom: 220px;
+    bottom: 218px;
     background: linear-gradient(90deg, rgba(255,107,51,1) 35%, #b68181 50%, rgba(255,107,51,1) 65%);
     background-repeat: 3;
     background-size: 33%;
@@ -140,17 +182,17 @@
     height: 150px;
     clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
     border-radius: 20%;
-    right: 43px;
+    right: 45px;
   }
   .kettle-lid {
     position: absolute;
-    bottom: 310px;
+    bottom: 300px;
     background-color: #ff6b33;
-    width: 160px;
-    height: 80px;
+    width: 165px;
+    height: 85px;
     clip-path: polygon(30% 0, 70% 0, 100% 35%, 0 35%);
-    right: 43px;
-    border-radius: 40%;
+    right: 45px;
+    border-radius: 20%;
   }
   .kettle-top {
     position: absolute;
@@ -159,8 +201,26 @@
     width: 30px;
     height: 40px;
     right: 110px;
-    top: 70px;
+    top: 75px;
     border-radius: 20%;
+  }
+  .kettle-side {
+    position: absolute;
+    background-color: #ff6b33;
+    top: 133px;
+    width: 25px;
+    height: 25px;
+    border-radius: 5%;
+    right: 35px;
+  }
+  .kettle-handle {
+    position: absolute;
+    background-color: black;
+    right: 0px;
+    height: 150px;
+    width: 100px;
+    top: 107px;
+    clip-path: polygon(65% 18%, 77% 19%, 91% 24%, 100% 42%, 100% 70%, 98% 91%, 84% 91%, 87% 71%, 88% 51%, 84% 38%, 65% 33%);
   }
   .cafebr{
     text-align: center;
@@ -242,13 +302,20 @@
     <div class="kettle-divider">
       
   </div>
-    <div class="kettle-lid">
-      
-  </div> 
+
     <div class="kettle-body">
       
   </div>
+      <div class="kettle-lid">
+      
+  </div> 
   <div class="kettle-top">
+    
+  </div>
+  <div class="kettle-side">
+    
+  </div>
+  <div class="kettle-handle">
     
   </div>
   <div class="coffee left-coffee">
@@ -304,7 +371,10 @@
 
     </div> -->
   <div class="cup bottom-cup"></div>
-  <div class="cup side-cup">
+  <div class="side-cup">
 
+  </div>
+  <div class="star">
+    
   </div>
 </div>
